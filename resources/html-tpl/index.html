@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProBee</title>
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- Include required JS files for syntax highlightning -->
+    <script type="text/javascript" src="js/shCore.js"></script>
+
+    <!--
+        At least one brush, here we choose JS. You need to include a brush for every
+        language you want to highlight
+      -->
+    <script type="text/javascript" src="js/shBrushClojure.js"></script>
+
+    <!-- Include *at least* the core style and default theme -->
+    <link href="css/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+
+    <!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+    <script type="text/javascript">
+       (function(global){
+       var svg = !!('createElementNS' in document &&
+       document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect)
+       if (!svg) document.body.className += ' no-svg'
+       ;(global.updateSVGIMG = function(){
+       var i, src, extension = svg ? '.svg' : '.png',
+       elements = document.getElementsByTagName('img')
+       for (i=0;i<elements.length;i++)
+                    if (src = elements[i].getAttribute('data-svg')) {
+                    elements[i].src = src + extension
+                    elements[i].removeAttribute('data-svg')
+                    }
+                    })()
+                    })(this)
+
+      SyntaxHighlighter.defaults['toolbar'] = false;
+      SyntaxHighlighter.all();
+
+      function lineWrap(){
+        var wrap = function () {
+          var elems = document.getElementsByClassName('syntaxhighlighter');
+
+          for (var j = 0; j < elems.length; ++j) {
+            var sh = elems[j];
+            var gLines = sh.getElementsByClassName('gutter')[0].getElementsByClassName('line');
+            var cLines = sh.getElementsByClassName('code')[0].getElementsByClassName('line');
+            var stand = 15;
+            for (var i = 0; i < gLines.length; ++i) {
+                var h = $(cLines[i]).height();
+                if (h != stand) {
+                    console.log(i);
+                    gLines[i].setAttribute('style', 'height: ' + h + 'px !important;');
+                }
+            }
+          }
+       };
+
+       var whenReady = function () {
+         if ($('.syntaxhighlighter').length === 0) {
+            setTimeout(whenReady, 800);
+         } else {
+            wrap();
+         }
+    };
+
+    whenReady();
+};
+
+lineWrap();
+
+$(window).resize(function(){lineWrap()});
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-content">
+        <a id="logo" href=""></a>
+        <div id="menu">
+          <span class="menu-item"><a href=""></a></span>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="content"></div>
+    </div>
+    <div id="footer">
+      <div id="footer-border">&nbsp;</div>
+      <div id="footer-content">
+        <div class="contacts">
+          <div class="contact mail"><div class="logo"></div><span><a href="mailto:admin@probee.eu" target="_blank">admin@probee.eu</a></span></div>
+          <div class="contact twitter"><div class="logo"></div><span><a href="https://twitter.com/ProBeeEU" target="_blank">@ProBeeEU</a></span></div>
+          <div class="contact github"><div class="logo"></div><span><a href="https://github.com/probeeeu" target="_blank">ProBee</a></span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

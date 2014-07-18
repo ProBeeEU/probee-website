@@ -1,0 +1,1320 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+ol,ul {
+    list-style:none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    margin: 0px;
+    background-color: #f2f2f2;
+}
+
+#header {
+    width: 100%;
+    height: 95px;
+    background-color: #222222;
+    margin: 0;
+    background-image: url('../images/texture.svg');
+    background-size: 20px 20px;
+}
+
+.no-svg #header {
+    background-image: url('../images/texture.png');
+}
+
+#header-content {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0px auto 0px auto;
+    background: transparent;
+}
+
+#logo {
+    display: block;
+    float: left;
+    height: 70px;
+    width: 218px;
+    margin-top: 12px;
+    margin-left: 35px;
+    background-image: url('../images/logo.svg');
+    background-size: 218px 70px;
+}
+
+.no-svg #logo {
+    background-image: url('../images/logo.png');
+}
+
+#menu {
+    float: right;
+    margin-top: 3px;
+}
+
+#menu .menu-item {
+    float: left;
+    margin-right: 25px;
+    margin-top: 35px;
+    height: 24px;
+    font-family: "Sans";
+}
+
+#menu .selected {
+    border-bottom: 3px solid #ffc62a;
+}
+
+#menu .menu-item a {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#container {
+    width: 100%;
+    //background-color: #cceaf8;
+    background-color: #dedede;
+    background-image: url('../images/tree.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px bottom;
+    background-origin: content-box;
+    background-size: 220px;
+}
+
+.no-svg #container {
+    background-image: url('../images/tree.png');
+}
+
+#content {
+    max-width: 1024px;
+    margin: 0px auto 0px auto;
+    background-color: #393939;
+    font-size: 14px;
+    color: #e2ddd2;
+    min-height: 528px;
+    height: auto;
+    line-height: 22px;
+}
+
+a {
+    color: #999999;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffb914;
+    text-decoration: none;
+}
+
+#content h1 {
+    color: #ffc400;
+    font-size: 24px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-bottom: 15px;
+}
+
+#content .text h2 {
+    font-size: 18px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding-top: 6px;
+    margin-bottom: 6px;
+}
+
+#content .text, #content .goals {
+    padding: 35px;
+}
+
+#content a {
+    color: #ffc400;
+}
+
+#content a:hover {
+    color: #ffed58;
+}
+
+#content .text h1:not(:first-child) {
+    margin-top: 35px;
+}
+
+#content .text p, #content .subtext p  {
+    margin-bottom: 15px;
+}
+
+#content ul, #content ol {
+    padding-bottom: 15px;
+}
+
+#content ul li {
+    background-image: url('../images/hive.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 11px;
+    background-size: 10px;
+    padding-top: 7px;
+    padding-left: 20px;
+    margin-left: 25px;
+}
+
+.no-svg #content ul li {
+    background-image: url('../images/hive.png');
+}
+
+#content[data-page=home], #content[data-page=progress] {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#content[data-page=home] .text, #content[data-page=progress] .goals {
+    width: 70%;
+    -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
+    -ms-flex-order: 1;              /* TWEENER - IE 10 */
+    -webkit-order: 1;               /* NEW - Chrome */
+    order: 1;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#content #sidebar {
+    color: #333333;
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: 30%;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+}
+
+#content #sidebar #recent-posts, #content #sidebar #recent-updates {
+    margin: 10px 10px 0px 10px;
+    background-color: #222222;
+    border: 3px solid black;
+}
+
+#content #sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #e2ddd2;
+    padding-top: 8px;
+    font-size: 18px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#sidebar .no-posts {
+    text-align: center;
+    color: #e2ddd2;
+}
+
+#sidebar .recent-post {
+    margin-left: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 12px;
+}
+
+#sidebar .recent-post a {
+    //color: #ffb914;
+    color: #ffc400;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar .recent-post a:hover {
+    color: #ffed58;
+}
+
+#sidebar .recent-post .date {
+     font-size: 10px;
+     color: #e2ddd2;
+}
+
+#content .text .no-posts {
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 24px;
+}
+
+#content .post {
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+#content .post h2 {
+    color: #ffc400;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+#content .post .date {
+    font-size: 12px;
+    color: #808080;
+    display: block;
+    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+#content .post .link {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: right;
+    color: #ffc400;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#content .post:not(:last-child) {
+    border-bottom: 3px solid black;
+}
+
+#content .goals .subtext {
+    padding-bottom: 25px;
+}
+
+#content .goals .goal {
+    margin-bottom: 20px;
+}
+
+#content .goals .goal h2 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#content .goals .goal-content {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    border: 3px solid black;
+    background-color: #222222;
+    padding: 10px;
+}
+
+#content .goals .goal .icon-box {
+    width: 40px;
+    -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
+    -ms-flex-order: 1;              /* TWEENER - IE 10 */
+    -webkit-order: 1;               /* NEW - Chrome */
+    order: 1;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+#content .goals .goal .icon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 46px 50px;
+    float: left;
+}
+
+#content .goals .goal .icon {
+    background-image: url('../images/trophy-outline.svg');
+}
+
+.no-svg #content .goals .goal .icon {
+    background-image: url('../images/trophy-outline.png');
+}
+
+#content .goals .locked .icon {
+    background-image: url('../images/padlock.svg');;
+    background-size: 39px 50px;
+}
+
+.no-svg #content .goals .locked .icon {
+    background-image: url('../images/padlock.png');;
+}
+
+#content .goals .completed .icon {
+    background-image: url('../images/trophy.svg');
+}
+
+.no-svg #content .goals .completed .icon {
+    background-image: url('../images/trophy.png');
+}
+
+#content .goals .description {
+    -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1;         /* OLD - Firefox 19- */
+    width: auto;               /* For old syntax, otherwise collapses. */
+    -webkit-flex: 1;          /* Chrome */
+    -ms-flex: 1;              /* IE 10 */
+    flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    margin-left: 20px;
+}
+
+#content .goals .description .work {
+    color: #2f8dff;
+}
+
+#content .goals .description .completed {
+    color: #00dd00;
+}
+
+#footer {
+    height: 120px;
+    background-color: #222222;
+    width: 100%;
+}
+
+#footer #footer-border {
+    background-image: url('../images/grass.svg');
+    position: relative;
+    top: -14px;
+    height: 15px;
+    background-repeat: repeat-x;
+    width: 100%;
+    background-size: 240px 15px;
+}
+
+.no-svg #footer #footer-border {
+    background-image: url('../images/grass.png');
+}
+
+#footer #footer-content {
+    max-width: 1024px;
+    background: transparent;
+    margin: 0px auto 0px auto;
+}
+
+#footer #footer-content .contacts {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 35px;
+}
+
+#footer #footer-content .contact {
+    display: block;
+    clear: both;
+    margin-bottom: 18px;
+    vertical-align: top;
+}
+
+#footer #footer-content .contact a {
+    color: #666666;
+}
+
+#footer #footer-content .contact div.logo {
+    margin-right: 12px;
+    display: block;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background-repeat: no-repeat;
+}
+
+#footer #footer-content .twitter div.logo {
+    background-image: url('../images/twitter.svg');
+    background-size: 25px 22px;
+}
+
+.no-svg #footer #footer-content .twitter div.logo {
+    background-image: url('../images/twitter.png');
+}
+
+#footer #footer-content .twitter span {
+    position: relative;
+    top: 2px;
+}
+
+#footer #footer-content .mail {
+    margin-bottom: 14px;
+}
+
+#footer #footer-content .mail div.logo {
+    background-image: url('../images/letter.svg');
+    background-size: 24px 16px;
+}
+
+.no-svg  #footer #footer-content .mail div.logo {
+    background-image: url('../images/letter.png');
+    background-size: 24px 16px;
+}
+
+#footer #footer-content .mail span {
+    position: relative;
+    top: -1px;
+}
+
+#footer #footer-content .github div.logo {
+    background-image: url('../images/github.svg');
+    background-size: 25px 24px;
+}
+
+.no-svg  #footer #footer-content .github div.logo {
+    background-image: url('../images/github.png');
+    background-size: 25px 24px;
+}
+
+#footer #footer-content .github span {
+    position: relative;
+    top: 3px;
+}
+
+/* Laptop (1024px) */
+@media only screen and (min-width: 721px) and (max-width: 1024px) {
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: 65%;
+    }
+
+    #content #sidebar {
+        width: 35%;               /* For old syntax, otherwise collapses. */
+    }
+}
+
+/* Tablet (1024px) */
+@media screen and (min-device-width: 721px) and (max-device-width: 1024px) and (orientation: portrait) {
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: 65%;
+    }
+
+    #content #sidebar {
+        width: 35%;               /* For old syntax, otherwise collapses. */
+    }
+}
+
+/* Tablet (1024px) - Galaxy Tab 7' */
+@media screen and (min-device-width: 721px) and (max-device-width: 1024px) and (orientation: landscape) {
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: 65%;
+    }
+
+    #content #sidebar {
+        width: 35%;
+        padding-top: 1px;
+    }
+}
+
+/* Laptop (720px) */
+@media only screen and (min-width: 641px) and (max-width: 720px) {
+    #logo {
+        margin-left: 10px;
+    }
+
+    #menu {
+        margin-top: 4px;
+    }
+
+    #menu .menu-item {
+        margin-right: 20px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 16px;
+    }
+
+    #content {
+        min-height: 480px;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: 60%;
+    }
+
+    #content #sidebar {
+        width: 40%;               /* For old syntax, otherwise collapses. */
+    }
+
+    #content .text, #content .goals {
+        padding: 25px 15px 15px 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post .link {
+        padding: 15px 5px 15px 0px;
+    }
+}
+
+/* Tablet (720px) */
+@media screen and (min-device-width: 641px) and (max-device-width: 720px) and (orientation: portrait) {
+    #logo {
+        margin-left: 10px;
+    }
+
+    #menu {
+        margin-top: 4px;
+    }
+
+    #menu .menu-item {
+        margin-right: 20px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 16px;
+    }
+
+    #content {
+        min-height: 480px;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: 60%;
+    }
+
+    #content #sidebar {
+        width: 40%;               /* For old syntax, otherwise collapses. */
+    }
+
+    #content .text, #content .goals {
+        padding: 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post .link {
+        padding: 15px 5px 15px 0px;
+    }
+}
+
+/* Desktop (640px) */
+@media only screen and (min-width: 481px) and (max-width: 640px) {
+    body {
+        background-color: gray;
+    }
+
+    #header {
+        height: 85px;
+    }
+
+    #logo {
+        height: 62px;
+        width: 193px;
+        margin-left: 10px;
+        background-size: 193px 62px;
+    }
+
+    #menu {
+        margin-top: 0px;
+    }
+
+    #menu .menu-item {
+        margin-right: 12px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 14px;
+    }
+
+    #content {
+        font-size: 13px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    #content .text, #content .goals {
+        padding: 25px 15px 15px 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 22px;
+    }
+
+    #content .post .date {
+        font-size: 11px;
+        padding-bottom: 15px;
+    }
+
+    #content .post .link {
+        font-size: 13px;
+        padding: 15px 5px 15px 0px;
+    }
+}
+
+/* Phone/Tablet (640px) - Galaxy Tab 7' */
+@media screen and (min-device-width: 481px) and (max-device-width: 640px) and (orientation: portrait) {
+    #header {
+        height: 135px;
+    }
+
+    #logo {
+        height: 100px;
+        width: 311px;
+        margin-top: 18px;
+        margin-left: 25px;
+        background-size: 311px 100px;
+    }
+
+    #menu {
+        margin-top: 18px;
+    }
+
+    #menu .menu-item {
+        margin-right: 35px;
+        height: 32px;
+    }
+
+    #menu .selected {
+        border-bottom: 3px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 28px;
+    }
+
+    #content {
+        font-size: 25px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    #content .text, #content .goals {
+        padding: 35px;
+    }
+
+    #content .text p {
+        margin-bottom: 25px;
+    }
+
+    #content ul, #content ol {
+        padding-bottom: 25px;
+    }
+
+    #content ul li
+    {
+        background-position: 0px 14px;
+        background-size: 14px;
+        padding-top: 10px;
+        padding-left: 35px;
+        margin-left: 25px;
+    }
+
+    .syntaxhighlighter {
+        font-size: 25px !important;
+    }
+
+    #content .post {
+        margin-bottom: 35px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 38px;
+    }
+
+    #content .post .date {
+        font-size: 22px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    #content .post .link {
+        font-size: 25px;
+        padding: 15px 5px 25px 0px;
+    }
+
+    #content .goals .goal {
+        margin-bottom: 20px;
+    }
+
+    #content .goals .goal h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+
+    #content .goals .goal .icon-box {
+        width: 20px;
+        min-height: 60px;
+    }
+
+    #content .goals .goal .icon {
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+    }
+
+    #content .goals .description {
+        font-size: 25px;
+    }
+
+    #footer {
+        height: 205px;
+        width: 100%;
+    }
+
+    #footer #footer-border {
+        top: -30px;
+        height: 35px;
+        background-repeat: repeat-x;
+        width: 100%;
+        background-size: 400px 45px;
+    }
+
+    #footer #footer-content .contacts {
+        font-size: 22px;
+        margin-left: 45px;
+    }
+
+    #footer #footer-content .contact {
+        margin-bottom: 25px;
+    }
+
+    #footer #footer-content .contact div.logo {
+        margin-right: 22px;
+        height: 40px;
+        width: 40px;
+    }
+
+    #footer #footer-content .twitter div.logo {
+        background-size: 40px 35px;
+    }
+
+    #footer #footer-content .twitter span {
+        position: relative;
+        top: 4px;
+    }
+
+    #footer #footer-content .mail div.logo {
+        background-size: 40px 27px;
+    }
+
+    #footer #footer-content .mail span {
+        position: relative;
+        top: 0px;
+    }
+
+    #footer #footer-content .github div.logo {
+        background-size: 40px 38px;
+    }
+
+    #footer #footer-content .github span {
+        position: relative;
+        top: 10px;
+    }
+}
+
+/* Laptop (480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    body {
+        background-color: black;
+    }
+
+    #header {
+        height: 115px;
+    }
+
+    #logo {
+        height: 62px;
+        width: 193px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        background-size: 193px 62px;
+    }
+
+    #menu {
+        float: none;
+        margin-top: 0px;
+        padding: 5px 0px 10px 15px;
+    }
+
+    #menu .menu-item {
+        float: none;
+        margin-right: 18px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 14px;
+    }
+
+    #content {
+        font-size: 12px;
+        min-height: 320px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content .text, #content .goals {
+        padding: 25px 15px 15px 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 20px;
+    }
+
+    #content .post .date {
+        font-size: 10px;
+        padding-bottom: 15px;
+    }
+
+    #content .post .link {
+        font-size: 12px;
+        padding: 15px 5px 15px 0px;
+    }
+}
+
+/* Phone (480px) - Galaxy S5 */
+@media screen and (min-device-width: 321px) and (max-device-width: 480px) and (orientation: portrait) {
+    #header {
+        height: 185px;
+    }
+
+    #logo {
+        height: 110px;
+        width: 343px;
+        margin: 35px;
+        background-size: 343px 110px;
+    }
+
+    #menu {
+        float: right;
+        margin-top: 70px;
+        padding: 5px 10px 10px 15px;
+    }
+
+    #menu .menu-item {
+        float: none;
+        margin-right: 30px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 30px;
+    }
+
+    #content {
+        font-size: 11px;
+    }
+
+    #content div.syntaxhighlighter {
+        font-size: 15px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    #content .text, #content .goals {
+        padding: 45px;
+    }
+
+    #content .text p {
+        margin-bottom: 25px;
+    }
+
+    #content ul, #content ol {
+        padding-bottom: 25px;
+    }
+
+    #content ul li
+    {
+        background-position: 0px 12px;
+        background-size: 18px;
+        padding-top: 10px;
+        padding-left: 35px;
+        margin-left: 25px;
+    }
+
+    .syntaxhighlighter {
+        font-size: 25px !important;
+    }
+
+    .syntaxhighlighter {
+        border: 5px solid black;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 14px;
+    }
+
+    #content .post .date {
+        font-size: 8px;
+        padding-bottom: 15px;
+    }
+
+    #content .post .link {
+        font-size: 10px;
+        padding: 15px 5px 15px 0px;
+    }
+
+    #content .goals .goal {
+        margin-bottom: 20px;
+    }
+
+    #content .goals .goal h2 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    #content .goals .goal .icon-box {
+        width: 90px;
+    }
+
+    #content .goals .goal .icon {
+        width: 75px;
+        height: 75px;
+        background-size: 75px 75px;
+    }
+
+    #content .goals .description {
+        font-size: 1.6em;
+    }
+
+    #footer {
+        height: 200px;
+        width: 100%;
+    }
+
+    #footer #footer-border {
+        top: -30px;
+        height: 35px;
+        background-repeat: repeat-x;
+        width: 100%;
+        background-size: 400px 45px;
+    }
+
+    #footer #footer-content .contacts {
+        font-size: 22px;
+        margin-left: 45px;
+    }
+
+    #footer #footer-content .contact {
+        margin-bottom: 25px;
+    }
+
+    #footer #footer-content .contact div.logo {
+        margin-right: 22px;
+        height: 40px;
+        width: 40px;
+    }
+
+    #footer #footer-content .twitter div.logo {
+        background-size: 40px 35px;
+    }
+
+    #footer #footer-content .twitter span {
+        position: relative;
+        top: 4px;
+    }
+
+    #footer #footer-content .mail div.logo {
+        background-size: 40px 27px;
+    }
+
+    #footer #footer-content .mail span {
+        position: relative;
+        top: 0px;
+    }
+
+    #footer #footer-content .github div.logo {
+        background-size: 40px 38px;
+    }
+
+    #footer #footer-content .github span {
+        position: relative;
+        top: 10px;
+    }
+}
+
+/* Laptop (320px) */
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: blue;
+    }
+
+    #header {
+        height: 115px;
+    }
+
+    #logo {
+        height: 62px;
+        width: 193px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        background-size: 193px 62px;
+    }
+
+    #menu {
+        float: none;
+        margin-top: 0px;
+        padding: 5px 0px 10px 15px;
+    }
+
+    #menu .menu-item {
+        float: none;
+        margin-right: 15px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 14px;
+    }
+
+    #content {
+        font-size: 12px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content .text, #content .goals {
+        padding: 25px 15px 15px 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 20px;
+    }
+
+    #content .post .date {
+        font-size: 10px;
+        padding-bottom: 15px;
+    }
+
+    #content .post .link {
+        font-size: 12px;
+        padding: 15px 5px 15px 0px;
+    }
+}
+
+/* Phone (320px) - HTC Hero */
+@media screen and (max-device-width: 320px) and (orientation: portrait) {
+    #header {
+        height: 115px;
+    }
+
+    #logo {
+        height: 62px;
+        width: 193px;
+        margin-left: 10px;
+        margin-bottom: 8px;
+        background-size: 193px 62px;
+    }
+
+    .no-svg #logo {
+        background-image: url('../images/logo-small.png');
+    }
+
+    #menu {
+        float: none;
+        margin-top: 0px;
+        padding: 5px 0px 10px 15px;
+    }
+
+    #menu .menu-item {
+        float: none;
+        margin-right: 15px;
+        height: 20px;
+    }
+
+    #menu .selected {
+        border-bottom: 2px solid #ffc62a;
+    }
+
+    #menu .menu-item a {
+        font-size: 14px;
+    }
+
+    #content {
+        font-size: 12px;
+        min-height: 240px;
+    }
+
+    #content[data-page=home], #content[data-page=progress] {
+        display: block;
+    }
+
+    #content[data-page=home] .text, #content[data-page=progress] .goals {
+        width: auto;
+    }
+
+    #content #sidebar {
+        display: none;
+    }
+
+    #content h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    #content .text, #content .goals {
+        padding: 15px;
+    }
+
+    #content .post {
+        margin-bottom: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #content .post h2 {
+        font-size: 20px;
+    }
+
+    #content .post .date {
+        font-size: 10px;
+        padding-bottom: 15px;
+    }
+
+    #content .post .link {
+        font-size: 12px;
+        padding: 15px 5px 15px 0px;
+    }
+
+    #footer #footer-content .twitter div.logo {
+        background-size: 12px 12px;
+    }
+}
